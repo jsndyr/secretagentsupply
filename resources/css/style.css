@@ -1,0 +1,144 @@
+/* PAGE LEVEL STYLES */
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+/*  opacity: 0.9; /*Not sure if this belongs here or elsewhere in the CSS file. Whole page gets weirdly faded if used here */
+  margin: 0;
+  text-align: center;
+}
+
+a:link, a:visited, a:hover, a:active{
+  text-decoration: underline;
+  color: seashell;
+}
+
+h2, h3, h4 {
+  padding: 10px;
+  margin: 0; /*Note to self: this setting shrank the vertical height to fit redline spec */
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* HEADER-LEVEL ENTITY */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 69px;
+    background-color: black;
+    border-bottom: 1px solid seashell;
+    align-items: center;
+}
+
+header img {
+  height: 50px;
+  padding-left: 10px;
+}
+
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+nav span {
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+/* MASTER CONTAINER */
+.master-container {
+  padding-top: 70px; /*need to offset the fixed header */
+  width: 1200px;
+  margin: auto;
+}
+
+/* OUR MISSION CONTAINER */
+#mission {
+  height: 700px;
+  background-image: url("../img/img-mission-background.jpg");
+  padding-top: 70px;
+  opacity: 0.9; /*using this setting here to drop image brightness */
+}
+
+#mission .content {
+  margin: auto;
+  background-color: black;
+  width: 100%;
+}
+
+/* TEAS OF THE MONTH CONTAINER */
+#featured-tea {
+  width: 1000px;
+  height: 700px;
+  margin: auto;
+  padding-top: 70px;
+}
+.product { 
+  padding: 5px;
+}
+
+.product img {
+  display: block;
+  height: 200px;
+  widows: 300px;
+  margin: 10px;
+  opacity: 0.9; /*using this setting here to drop image brightness */
+}
+
+.product h4 {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* LOCATIONS CONTAINER */
+#locations {
+  background-image: url("../img/img-locations-background.jpg");
+  height: 500px;
+  width: 1200px;
+  margin: auto;
+  padding-top: 70px;
+  opacity: 0.9;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1.0;
+  background-color: black;
+  padding:10px;
+  margin: 20px;
+  flex-basis: 300px;
+}
+
+.flex-container.div {
+  padding-top: 5px;
+}
+
+
+/* CONTACT INFO CONTAINER */
+#contact-info {
+  height: 200px;
+}
+
+
+/* FOOTER CONTAINER */
+footer {
+  padding-left: 20px;
+  text-align: left;
+}
+
+
+/* USED FOR DEGBUGGING LAYOUTS
+  border-style: dotted;
+  border-color: white;
+*/
