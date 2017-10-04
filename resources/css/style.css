@@ -7,8 +7,6 @@ html {
 
 
 h1,
-h2,
-h3,
 h4 {
   font-weight: bold; 
 }
@@ -22,6 +20,10 @@ h4 {
   text-decoration: none;
   color: white;
 } 
+
+.mobile-menu {
+  display: none;
+}
 
 /* PAGE HEADER STYLES */
 .top-banner {
@@ -89,19 +91,19 @@ h4 {
 }
 
 /* PRODUCTS STYLES */
-.inventory{
+.products{
   display: flex;
   margin-top: 3rem;
   margin-bottom: 3rem;
   justify-content: space-between;
 }
 
-.product{
+.prod{
   width:30%;
   position: relative;
 }
 
-.product-details {
+.prod-img{
   display: flex;
   min-height: 13rem;
   max-height: 13rem;
@@ -111,7 +113,7 @@ h4 {
   align-items: center;
 }
 
-.product h4{
+.prod h4{
   display: block;
   background-color: black;
   text-align: center;
@@ -119,7 +121,7 @@ h4 {
   padding-bottom: 0.5rem;
 }
 
-.product-details img {
+.prod-img img {
   object-fit: scale-down;
   max-width: 8em;
 }
@@ -157,3 +159,120 @@ footer{
  }
 
 
+/* MEDIA QUERIES */
+/* TABLETS */
+@media only screen and (max-width: 1024px){
+
+  body{
+    font-size: 16px;
+  }
+
+  .prod {
+    width: 47%;
+    height: auto;
+  }
+
+  .glasses {
+    display: none;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .location,
+  .hours{
+    width:35%;
+  }
+
+  /* Dropdown mobile menu */
+ .mobile-menu{
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   background: firebrick;
+   text-align: center;
+   padding: 0.75rem 0;
+   margin: 0 auto;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .dropdown-content{
+   display: none;
+   z-index: 1;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   text-decoration: none;
+   position: absolute;
+   width: 100%;
+ }
+
+ .dropdown-content a{
+   display: block;
+   padding: 10px;
+   text-decoration: none;
+   background: white;
+   color: firebrick;
+ }
+
+ .dropdown-content a:hover{
+   background: firebrick;
+   color: white;
+ }
+
+ .mobile-menu:hover .dropdown-content{
+   display: block;
+ }
+}
+
+
+/* PHONES */
+@media only screen and (max-width: 470px){
+
+  .watch {
+    display: none;
+  }
+
+  .sub-banner {
+    height: 15rem;
+  }
+  .splash-txt {
+ 
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 3rem;
+  }
+  .splash-txt h1 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  .splash-txt h4 {
+    font-size: 0.77rem;
+    font-weight: bold;
+  }
+
+  .prod,
+  .location,
+  .hours  {
+    width: 90%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .products,
+  .contact  {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .contact {
+    margin-bottom: 0.5rem;
+  }
+
+  footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
